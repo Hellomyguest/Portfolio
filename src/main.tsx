@@ -8,7 +8,7 @@ import { App } from "./App";
 
 import { routesMap } from "./pages";
 
-const router = createHistoryRouter({
+export const router = createHistoryRouter({
   routes: routesMap,
 });
 
