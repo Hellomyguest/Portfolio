@@ -1,6 +1,7 @@
-import { Space, Switch } from "antd";
+import { Switch } from "antd";
 import { useUnit } from "effector-react";
 import { $theme, themeChanged } from "../model/model";
+import { IconMoon, IconSun } from "../icons";
 
 export enum Themes {
   DEFAULT = "default",
@@ -14,10 +15,11 @@ export const ThemeSwitcher = () => {
     checked ? themeChangedFn(Themes.DARK) : themeChangedFn(Themes.DEFAULT);
 
   return (
-    <Space>
-      День
-      <Switch checked={themeValue === Themes.DARK} onChange={handleChange} />
-      Ночь
-    </Space>
+    <Switch
+      checked={themeValue === Themes.DARK}
+      onChange={handleChange}
+      checkedChildren={<IconMoon />}
+      unCheckedChildren={<IconSun />}
+    />
   );
 };

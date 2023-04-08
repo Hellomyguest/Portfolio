@@ -5,6 +5,7 @@ import { createHistoryRouter } from "atomic-router";
 import { RouterProvider } from "atomic-router-react";
 import { createBrowserHistory } from "history";
 import { App } from "./App";
+import "./shared/lib/i18n/i18n";
 
 import { routesMap } from "./pages";
 

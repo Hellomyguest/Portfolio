@@ -1,0 +1,24 @@
+._ {
+  position: absolute;
+  top: 10rem;
+  left: -135.45px;
+  display: flex;
+  align-items: center;
+  transition: left;
+  transition-duration: 1s;
+}
+
+.open {
+  left: 0;
+}
+
+.container {
+  border-bottom-left-radius: 0 !important;
+  border-top-left-radius: 0 !important;
+}
+
+.button {
+  border-bottom-left-radius: 0 !important;
+  border-top-left-radius: 0 !important;
+  border-left: none;
+}
