@@ -3,8 +3,8 @@ import { Button, Card, Space, Typography } from "antd";
 import { useState } from "react";
 import classNames from "classnames";
 import styles from "./Settings.module.scss";
-import { ThemeSwitcher } from "../../../../features/theme-switcher/ui/ThemeSwitcher";
-import { LanguageSwitcher } from "../../../../features/language-switcher/ui/LanguageSwitcher";
+import { LanguageSwitcher } from "../../../language-switcher/ui/LanguageSwitcher";
+import { ThemeSwitcher } from "../../../theme-switcher/ui/ThemeSwitcher";
 
 const { Text } = Typography;
 
