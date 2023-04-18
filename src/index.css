@@ -18,10 +18,5 @@
 body {
   margin: 0;
   min-width: 320px;
-  background: url(./shared/images/bg.jpg);
-  background-size: cover;
-}
-
-.ant-timeline .ant-timeline-item-head {
-  background-color: transparent;
+  background: url(./shared/images/bg2.jpg) center top;
 }

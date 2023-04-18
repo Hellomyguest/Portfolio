@@ -1,4 +1,8 @@
-import Icon, { MailOutlined } from "@ant-design/icons";
+import Icon, {
+  GithubFilled,
+  GitlabFilled,
+  MailOutlined,
+} from "@ant-design/icons";
 import { Space, Button } from "antd";
 import { useTranslation } from "react-i18next";
 import { ReactComponent as VkIcon } from "./lib/icons/vk.svg";
@@ -22,6 +26,20 @@ export const Contacts = () => {
         type="link"
         target="_blank"
         icon={<Icon component={TelegramIcon} />}
+      />
+      <Button
+        size="small"
+        href="https://github.com/Hellomyguest"
+        type="link"
+        target="_blank"
+        icon={<GithubFilled />}
+      />
+      <Button
+        size="small"
+        href="https://gitlab.com/Hellomyguest"
+        type="link"
+        target="_blank"
+        icon={<GitlabFilled />}
       />
       <Button type="primary" href="mailto:hellomyguest@yandex.ru">
         {t("navigation.hire")}

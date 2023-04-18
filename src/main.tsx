@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
+import "./antd-settings.scss";
 import { createHistoryRouter } from "atomic-router";
 import { RouterProvider } from "atomic-router-react";
 import { createBrowserHistory } from "history";

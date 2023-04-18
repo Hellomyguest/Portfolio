@@ -1,0 +1,26 @@
+// Timeline
+.ant-timeline .ant-timeline-item-head {
+    background-color: transparent;
+  }
+
+// Carousel dots
+.ant-carousel .slick-dots {
+    position: initial;
+  }
+  
+  :where(.css-dev-only-do-not-override-sr3mtu).ant-carousel .slick-dots li.slick-active button {
+      background: white;
+  }
+  
+  :where(.css-dev-only-do-not-override-sr3mtu).ant-carousel .slick-dots li button {
+      background: white;
+  }
+  
+  :where(.css-dev-only-do-not-override-1vtf12y).ant-carousel .slick-dots li.slick-active button {
+      background: black;
+  }
+  
+  :where(.css-dev-only-do-not-override-1vtf12y).ant-carousel .slick-dots li button {
+      background: black;
+  }
+  

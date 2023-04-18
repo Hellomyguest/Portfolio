@@ -1,0 +1,22 @@
+._ {
+  display: inline-block;
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.title {
+  display: inline;
+  position: relative;
+}
+
+.underline {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 30%;
+  width: 100%;
+  opacity: 0.6;
+  background-color: #1677ff;
+  --webkit-clip-path: polygon(0 75%, 100% 0, 100% 100%, 0% 100%);
+  clip-path: polygon(0 75%, 100% 0, 100% 100%, 0% 100%);
+}
