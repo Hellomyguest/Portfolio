@@ -26,6 +26,12 @@ export default {
           title: "About me",
           text: "",
         },
+        codeSkills: {
+          title: "Code skills",
+        },
+        frameworkSkills: {
+          title: "Frameworks skills",
+        },
       },
       contactsPage: {
         infoTitle: "Contact Information",
@@ -226,6 +232,12 @@ export default {
         about: {
           title: "Обо мне",
           text: "В 31 год решил",
+        },
+        codeSkills: {
+          title: "Навыки программирования",
+        },
+        frameworkSkills: {
+          title: "Владение фреймворками",
         },
       },
       contactsPage: {
