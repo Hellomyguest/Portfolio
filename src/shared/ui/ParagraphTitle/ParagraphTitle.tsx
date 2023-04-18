@@ -5,11 +5,12 @@ import styles from "./ParagraphTitle.module.scss";
 type PropsType = {
   children: string;
   className?: string;
+  level?: 1 | 2 | 3 | 4 | 5;
 };
 
-export const ParagraphTitle = ({ className, children }: PropsType) => (
+export const ParagraphTitle = ({ className, level, children }: PropsType) => (
   <div className={classNames(styles._, className)}>
-    <Title level={3} className={styles.title}>
+    <Title level={level} className={styles.title}>
       {children}
     </Title>
     <span className={styles.underline} />
@@ -18,4 +19,5 @@ export const ParagraphTitle = ({ className, children }: PropsType) => (
 
 ParagraphTitle.defaultProps = {
   className: undefined,
+  level: 3,
 };

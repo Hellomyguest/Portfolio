@@ -11,10 +11,13 @@ export const HomePage = () => {
     <>
       <ParagraphTitle>{t("homePage.about.title")}</ParagraphTitle>
       <Paragraph>{t("homePage.about.text")}</Paragraph>
+      <ParagraphTitle>{t("homePage.skills.title")}</ParagraphTitle>
       <Row gutter={16}>
-        <Col span={12}>
+        <Col span={8}>
           <Space size="small" direction="vertical" style={{ width: "100%" }}>
-            <ParagraphTitle>{t("homePage.codeSkills.title")}</ParagraphTitle>
+            <ParagraphTitle level={4}>
+              {t("homePage.skills.code")}
+            </ParagraphTitle>
             <div>
               <Title level={5} style={{ margin: 0 }}>
                 HTML5
@@ -72,10 +75,10 @@ export const HomePage = () => {
             </div>
           </Space>
         </Col>
-        <Col span={12}>
+        <Col span={8}>
           <Space size="small" direction="vertical" style={{ width: "100%" }}>
-            <ParagraphTitle>
-              {t("homePage.frameworkSkills.title")}
+            <ParagraphTitle level={4}>
+              {t("homePage.skills.libraries")}
             </ParagraphTitle>
             <div>
               <Title level={5} style={{ margin: 0 }}>
@@ -127,6 +130,35 @@ export const HomePage = () => {
               </Title>
               <Slider
                 value={80}
+                handleStyle={{ display: "none" }}
+                style={{ marginInline: 0 }}
+                trackStyle={{ backgroundColor: "#1668dc", opacity: 0.8 }}
+              />
+            </div>
+          </Space>
+        </Col>
+        <Col span={8}>
+          <Space size="small" direction="vertical" style={{ width: "100%" }}>
+            <ParagraphTitle level={4}>
+              {t("homePage.skills.frameworks")}
+            </ParagraphTitle>
+            <div>
+              <Title level={5} style={{ margin: 0 }}>
+                Node.js
+              </Title>
+              <Slider
+                value={0}
+                handleStyle={{ display: "none" }}
+                style={{ marginInline: 0 }}
+                trackStyle={{ backgroundColor: "#1668dc", opacity: 0.8 }}
+              />
+            </div>
+            <div>
+              <Title level={5} style={{ margin: 0 }}>
+                Next.js
+              </Title>
+              <Slider
+                value={0}
                 handleStyle={{ display: "none" }}
                 style={{ marginInline: 0 }}
                 trackStyle={{ backgroundColor: "#1668dc", opacity: 0.8 }}
