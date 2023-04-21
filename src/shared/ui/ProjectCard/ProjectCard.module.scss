@@ -1,0 +1,36 @@
+.badge {
+    color: #f5222d
+}
+
+.button {
+    padding: 0;
+    height: fit-content;
+}
+
+.card {
+    width: 15rem;
+}
+
+.card:hover {
+    cursor: default;
+}
+
+.gitIcon {
+    color: rgba(0, 0, 0, 0.88)
+}
+
+.gitIcon_dark {
+    color: rgba(255, 255, 255, 0.85)
+}
+
+.tags {
+    justify-content: space-evenly;
+}
+
+.video {
+    width: 50rem;
+}
+
+.display_none {
+    display: none;
+}
