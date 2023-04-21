@@ -4,6 +4,7 @@ import {
   navigationTranslations,
   profileCardTranslations,
 } from "./translations/layout";
+import { portfolioPageTranslations } from "./translations/portfolioPage";
 import { resumePageTranslations } from "./translations/resumePage";
 
 export const translations = {
@@ -14,6 +15,7 @@ export const translations = {
       homePage: homePageTranslations.en,
       contactsPage: contactsPageTranslations.en,
       resumePage: resumePageTranslations.en,
+      portfolioPage: portfolioPageTranslations.en,
     },
   },
   "ru-RU": {
@@ -23,6 +25,7 @@ export const translations = {
       homePage: homePageTranslations.ru,
       contactsPage: contactsPageTranslations.ru,
       resumePage: resumePageTranslations.ru,
+      portfolioPage: portfolioPageTranslations.ru,
     },
   },
 };
