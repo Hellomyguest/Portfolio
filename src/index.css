@@ -18,6 +18,5 @@
 body {
   margin: 0;
   min-width: 320px;
-  background: linear-gradient(rgba(0, 0, 0, 0.4) 0 100%),
-    url(./shared/images/bg6.jpg) center top;
+  background: url(./shared/images/bg1.jpg) center top;
 }

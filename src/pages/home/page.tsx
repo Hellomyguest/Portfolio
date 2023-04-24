@@ -37,7 +37,9 @@ export const HomePage = () => {
   return (
     <>
       <ParagraphTitle>{t("homePage.about.title")}</ParagraphTitle>
-      <Paragraph>{t("homePage.about.text")}</Paragraph>
+      <Paragraph className={styles.paragraph}>
+        {t("homePage.about.text")}
+      </Paragraph>
       <ParagraphTitle>{t("homePage.skills.title")}</ParagraphTitle>
       <Row gutter={16}>
         <Col span={8}>

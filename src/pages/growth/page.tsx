@@ -1,5 +1,5 @@
 /* eslint-disable no-script-url */
-import { Progress, Tabs } from "antd";
+import { Progress, Space, Tabs } from "antd";
 import { useTranslation } from "react-i18next";
 import { CardsCarousel, InfoCard, ParagraphTitle } from "../../shared/ui";
 import {
@@ -142,6 +142,22 @@ const readBooks: BookType[] = [
   },
 ];
 
+const events: CardType[] = [
+  {
+    title: "Неделя фронтенда\n17.03.2023\nХабр карьера",
+    link: "https://www.youtube.com/watch?v=3ab195pqY50&ab_channel=Habr",
+  },
+  {
+    title: "Intern Frontend Meetup\n18.04.2023\nЯндекс",
+    link: "https://www.youtube.com/watch?v=Fq8McBvfkWg&ab_channel=%D0%90%D0%BA%D0%B0%D0%B4%D0%B5%D0%BC%D0%B8%D1%8F%D0%AF%D0%BD%D0%B4%D0%B5%D0%BA%D1%81%D0%B0",
+  },
+  {
+    title:
+      "Как найти первую работу в IT и не облажаться!\n24.04.2023\nХабр карьера",
+    link: "https://start.habr.com/",
+  },
+];
+
 export const GrowthPage = () => {
   const { t } = useTranslation();
   const courses = [
@@ -195,16 +211,30 @@ export const GrowthPage = () => {
   ];
 
   return (
-    <>
-      <ParagraphTitle>{t("growthPage.leetCode")}</ParagraphTitle>
-      <Progress
-        percent={0.7}
-        strokeColor={{ "0%": "#108ee9", "100%": "#87d068" }}
-      />
-      <ParagraphTitle>{t("growthPage.courses.title")}</ParagraphTitle>
-      <Tabs defaultActiveKey="1" items={courses} />
-      <ParagraphTitle>{t("growthPage.books.title")}</ParagraphTitle>
-      <Tabs defaultActiveKey="1" items={books} />
-    </>
+    <Space direction="vertical" style={{ width: "100%" }}>
+      <div>
+        <ParagraphTitle>{t("growthPage.leetCode")}</ParagraphTitle>
+        <Progress
+          percent={0.7}
+          strokeColor={{ "0%": "#108ee9", "100%": "#87d068" }}
+        />
+      </div>
+      <div>
+        <ParagraphTitle>{t("growthPage.courses.title")}</ParagraphTitle>
+        <Tabs defaultActiveKey="1" items={courses} />
+      </div>
+      <div>
+        <ParagraphTitle>{t("growthPage.events")}</ParagraphTitle>
+        <CardsCarousel
+          cards={events.map((item) => (
+            <InfoCard title={item.title} link={item.link} />
+          ))}
+        />
+      </div>
+      <div>
+        <ParagraphTitle>{t("growthPage.books.title")}</ParagraphTitle>
+        <Tabs defaultActiveKey="1" items={books} />
+      </div>
+    </Space>
   );
 };

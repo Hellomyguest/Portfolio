@@ -6,6 +6,7 @@ export const growthPageTranslations = {
       done: "Completed",
       scheduled: "Scheduled",
     },
+    events: "Attended events",
     books: {
       title: "Books",
       done: "Read",
@@ -19,6 +20,7 @@ export const growthPageTranslations = {
       done: "Пройденные",
       scheduled: "Запланированные",
     },
+    events: "Посещённые мероприятия",
     books: {
       title: "Книги",
       done: "Прочитанные",
