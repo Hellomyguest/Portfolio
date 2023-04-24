@@ -2,7 +2,7 @@ export const resumePageTranslations = {
   en: {
     title: "Resume",
     characteristics: {
-      title: "Characteristics",
+      title: "Reviews",
     },
     work: {
       title: "Working history",
@@ -164,7 +164,7 @@ export const resumePageTranslations = {
   ru: {
     title: "Резюме",
     characteristics: {
-      title: "Характеристики",
+      title: "Отзывы",
     },
     work: {
       title: "Опыт работы",

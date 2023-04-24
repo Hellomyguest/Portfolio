@@ -2,7 +2,9 @@ import { PushpinFilled, DownloadOutlined } from "@ant-design/icons";
 import { Layout, Timeline, Image, Button, Typography } from "antd";
 import { useUnit } from "effector-react";
 import { useTranslation } from "react-i18next";
+import classNames from "classnames";
 import { $theme } from "../../../theme-switcher/model/model";
+import styles from "./ProfileCard.module.scss";
 import Photo from "./lib/photo.jpg";
 import Resume from "./lib/Resume.pdf";
 
@@ -20,27 +22,20 @@ export const ProfileCard = ({ className }: ProfileCardType) => {
   return (
     <Sider
       width="300px"
-      style={{
-        borderRadius: "0.5rem",
-        padding: "1rem 0 2rem",
-        backgroundColor: themeValue === "dark" ? "#001529" : "white",
-        height: "fit-content",
-      }}
-      className={className}
+      className={classNames(styles._, className, {
+        [styles.dark]: themeValue === "dark",
+      })}
     >
-      <Title style={{ margin: 0, marginLeft: "1rem" }} level={5}>
+      <Title className={styles.title} level={5}>
         {t("profileCard.fullName")}
       </Title>
-      <Text style={{ marginLeft: "1rem" }}>{t("profileCard.speciality")}</Text>
-      <Image
-        src={Photo}
-        style={{ clipPath: "polygon(0 15%, 100% 0, 100% 85%, 0% 100%)" }}
-      />
+      <Text className={styles.text}>{t("profileCard.speciality")}</Text>
+      <Image src={Photo} className={styles.img} />
       <Timeline
-        style={{ marginLeft: "1rem", marginTop: "-1.5rem" }}
+        className={styles.timeline}
         items={[
           {
-            dot: <PushpinFilled style={{ fontSize: "1rem" }} />,
+            dot: <PushpinFilled className={styles.dot} />,
             children: <p style={{ color: "transparent" }}>Start</p>,
           },
           {
@@ -64,7 +59,7 @@ export const ProfileCard = ({ className }: ProfileCardType) => {
               <Text>
                 <b>{t("profileCard.mail")}</b>{" "}
                 <Button
-                  style={{ paddingLeft: 0 }}
+                  className={styles.button}
                   size="small"
                   type="link"
                   href="mailto:hellomyguest@yandex.ru"
@@ -79,7 +74,7 @@ export const ProfileCard = ({ className }: ProfileCardType) => {
               <Text>
                 <b>Telegram:</b>{" "}
                 <Button
-                  style={{ paddingLeft: 0 }}
+                  className={styles.button}
                   size="small"
                   href="https://t.me/Hellomyguest"
                   type="link"
@@ -98,11 +93,7 @@ export const ProfileCard = ({ className }: ProfileCardType) => {
         download="Resume"
         target="_blank"
         icon={<DownloadOutlined />}
-        style={{
-          marginInline: "auto",
-          display: "block",
-          width: "fit-content",
-        }}
+        className={styles.button_resume}
       >
         Скачать резюме
       </Button>

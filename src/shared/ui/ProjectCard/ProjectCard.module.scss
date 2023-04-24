@@ -1,36 +1,46 @@
 .badge {
-    color: #f5222d
+  color: #f5222d;
 }
 
 .button {
-    padding: 0;
-    height: fit-content;
+  padding: 0;
+  height: fit-content;
 }
 
 .card {
-    width: 15rem;
+  width: 15rem;
 }
 
 .card:hover {
-    cursor: default;
+  cursor: default;
+}
+
+.cover {
+  width: 100%;
+  aspect-ratio: 16/9;
+}
+
+.title {
+    margin: 0;
+    text-align: center;
 }
 
 .gitIcon {
-    color: rgba(0, 0, 0, 0.88)
+  color: rgba(0, 0, 0, 0.88);
 }
 
 .gitIcon_dark {
-    color: rgba(255, 255, 255, 0.85)
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .tags {
-    justify-content: space-evenly;
+  justify-content: space-evenly;
 }
 
 .video {
-    width: 50rem;
+  width: 50rem;
 }
 
 .display_none {
-    display: none;
+  display: none;
 }

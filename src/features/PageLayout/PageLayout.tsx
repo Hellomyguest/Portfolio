@@ -23,37 +23,15 @@ export const PageLayout = () => {
 
   return (
     <Layout
-      style={{
-        minHeight: "100vh",
-        display: "block",
-        paddingInline: "3rem",
-        backgroundColor:
-          themeValue === "dark" ? "rgba(0,0,0,0.65)" : "transparent",
-      }}
+      className={classNames(styles._, { [styles.dark]: themeValue === "dark" })}
     >
       <Settings />
-      <Layout
-        style={{
-          maxWidth: 1200,
-          backgroundColor: "transparent",
-          marginInline: "auto",
-          paddingTop: "5rem",
-          paddingBottom: "5rem",
-          height: "100%",
-        }}
-      >
+      <Layout className={styles.wrapper}>
         {isLoading && (
           <Avatar
             size={{ xs: 24, sm: 32, md: 40, lg: 64, xl: 80, xxl: 100 }}
             src={Photo}
-            style={{
-              position: "absolute",
-              left: "50%",
-              top: "50%",
-              transform: "translate(-50%, -50%)",
-              border: "0.25rem solid #1668dc",
-              boxSizing: "initial",
-            }}
+            className={styles.avatar}
           />
         )}
         <ProfileCard
@@ -62,31 +40,22 @@ export const PageLayout = () => {
           })}
         />
         <Layout
-          style={{
-            marginLeft: "3rem",
-            backgroundColor: "transparent",
-          }}
-          className={classNames(styles.hidden, {
-            [styles.visible]: !isLoading,
+          className={classNames(styles.container, {
+            [styles.container_visible]: !isLoading,
           })}
         >
           <Header
-            style={{
-              paddingInline: "1rem",
-              borderRadius: "0.5rem",
-              backgroundColor: themeValue === "dark" ? "#001529" : "white",
-            }}
+            className={classNames(styles.header, {
+              [styles.header_dark]: themeValue === "dark",
+            })}
           >
             <Contacts />
             <Navigation />
           </Header>
           <Content
-            style={{
-              marginTop: "3rem",
-              borderRadius: "0.5rem",
-              backgroundColor: themeValue === "dark" ? "#001529" : "white",
-              padding: "2rem",
-            }}
+            className={classNames(styles.content, {
+              [styles.content_dark]: themeValue === "dark",
+            })}
           >
             <Pages />
           </Content>

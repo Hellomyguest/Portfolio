@@ -1,4 +1,5 @@
 import { contactsPageTranslations } from "./translations/contactsPage";
+import { growthPageTranslations } from "./translations/growthPage";
 import { homePageTranslations } from "./translations/homePage";
 import {
   navigationTranslations,
@@ -16,6 +17,7 @@ export const translations = {
       contactsPage: contactsPageTranslations.en,
       resumePage: resumePageTranslations.en,
       portfolioPage: portfolioPageTranslations.en,
+      growthPage: growthPageTranslations.en,
     },
   },
   "ru-RU": {
@@ -26,6 +28,7 @@ export const translations = {
       contactsPage: contactsPageTranslations.ru,
       resumePage: resumePageTranslations.ru,
       portfolioPage: portfolioPageTranslations.ru,
+      growthPage: growthPageTranslations.ru,
     },
   },
 };

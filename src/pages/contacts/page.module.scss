@@ -1,3 +1,16 @@
+.button {
+  padding-left: 0;
+}
+
+.list {
+  width: fit-content;
+}
+
 .mapTitle {
   margin-top: 2rem;
+}
+
+.map {
+  width: 100%;
+  aspect-ratio: 16/9;
 }

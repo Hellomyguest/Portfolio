@@ -1,0 +1,42 @@
+._ {
+  border-radius: 0.5rem;
+  padding: 1rem 0 2rem;
+  background-color: white !important;
+  height: fit-content;
+}
+
+.dark {
+  background-color: #001529 !important;
+}
+
+.title {
+  margin: 0;
+  margin-left: 1rem;
+}
+
+.text {
+  margin-left: 1rem;
+}
+
+.img {
+  clip-path: polygon(0 15%, 100% 0, 100% 85%, 0% 100%);
+}
+
+.timeline {
+  margin-left: 1rem;
+  margin-top: -1.5rem;
+}
+
+.dot {
+  font-size: 1rem;
+}
+
+.button {
+  padding-left: 0;
+}
+
+.button_resume {
+  margin-inline: auto;
+  display: block;
+  width: fit-content;
+}

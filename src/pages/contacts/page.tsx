@@ -24,7 +24,7 @@ export const ContactsPage = () => {
     <Text>
       <b>{t("profileCard.mail")}</b>{" "}
       <Button
-        style={{ paddingLeft: 0 }}
+        className={styles.button}
         size="small"
         type="link"
         href="mailto:hellomyguest@yandex.ru"
@@ -35,7 +35,7 @@ export const ContactsPage = () => {
     <Text>
       <b>Telegram:</b>{" "}
       <Button
-        style={{ paddingLeft: 0 }}
+        className={styles.button}
         size="small"
         href="https://t.me/Hellomyguest"
         type="link"
@@ -47,7 +47,7 @@ export const ContactsPage = () => {
     <Text>
       <b>GitHub:</b>{" "}
       <Button
-        style={{ paddingLeft: 0 }}
+        className={styles.button}
         size="small"
         href="https://github.com/Hellomyguest"
         type="link"
@@ -59,7 +59,7 @@ export const ContactsPage = () => {
     <Text>
       <b>GitLab:</b>{" "}
       <Button
-        style={{ paddingLeft: 0 }}
+        className={styles.button}
         size="small"
         href="https://gitlab.com/Hellomyguest"
         type="link"
@@ -76,7 +76,7 @@ export const ContactsPage = () => {
       <List
         dataSource={listData}
         renderItem={(item) => <List.Item>{item}</List.Item>}
-        style={{ width: "fit-content" }}
+        className={styles.list}
       />
       <ParagraphTitle className={styles.mapTitle}>
         {t("contactsPage.mapTitle")}
@@ -84,7 +84,7 @@ export const ContactsPage = () => {
       <YMaps>
         <Map
           defaultState={{ center: [61.659727, 50.803161], zoom: 15 }}
-          style={{ width: "100%", height: "30rem" }}
+          className={styles.map}
         >
           <Placemark geometry={[61.659727, 50.803161]} />
         </Map>

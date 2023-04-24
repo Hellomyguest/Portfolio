@@ -25,7 +25,7 @@ type ProjectCardProps = {
   title: string;
   link?: string;
   githubLink?: string;
-  tags: string[];
+  tags?: string[];
   cover: string;
   video?: string;
 };
@@ -67,17 +67,13 @@ export const ProjectCard = ({
               className={styles.button}
               onClick={video ? handleClickOpenModal : () => {}}
             >
-              <img
-                alt="cover"
-                src={cover}
-                style={{ width: "100%", aspectRatio: "16/9" }}
-              />
+              <img alt="cover" src={cover} className={styles.cover} />
             </Button>
           }
         >
           <Meta
             title={
-              <Title level={5} style={{ margin: 0, textAlign: "center" }}>
+              <Title level={5} className={styles.title}>
                 {title}{" "}
                 {githubLink && (
                   <Tooltip title="Github repo">
@@ -136,4 +132,5 @@ ProjectCard.defaultProps = {
   link: null,
   githubLink: null,
   video: null,
+  tags: null,
 };
