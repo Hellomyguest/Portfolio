@@ -38,9 +38,9 @@ export const Pages = () => (
 );
 
 export const routesMap = [
-  { path: "/", route: routes.home },
-  { path: "/resume", route: routes.resume },
-  { path: "/portfolio", route: routes.portfolio },
-  { path: "/growth", route: routes.growth },
-  { path: "/contacts", route: routes.contacts },
+  { path: "/Portfolio/", route: routes.home },
+  { path: "/Portfolio/resume", route: routes.resume },
+  { path: "/Portfolio/portfolio", route: routes.portfolio },
+  { path: "/Portfolio/growth", route: routes.growth },
+  { path: "/Portfolio/contacts", route: routes.contacts },
 ];
