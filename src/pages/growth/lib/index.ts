@@ -1,5 +1,4 @@
 import Flanagan from "./images/Flanagan.jpg";
-import Kirichenko from "./images/Kirichenko.webp";
 import Fowler from "./images/Fowler.jpg";
 import Haverbeke from "./images/Haverbeke.webp";
 import Horstmann from "./images/Horstmann.jpeg";
@@ -19,7 +18,6 @@ import Nordman from "./images/Nordman.jpg";
 
 export {
   Flanagan,
-  Kirichenko,
   Fowler,
   Haverbeke,
   Horstmann,

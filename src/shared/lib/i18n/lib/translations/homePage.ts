@@ -9,6 +9,7 @@ export const homePageTranslations = {
       code: "Code",
       libraries: "Libraries",
       frameworks: "Frameworks",
+      english: "English language",
     },
   },
   ru: {
@@ -21,6 +22,7 @@ export const homePageTranslations = {
       code: "Языки",
       libraries: "Библиотеки",
       frameworks: "Фреймворки",
+      english: "Английский язык",
     },
   },
 };

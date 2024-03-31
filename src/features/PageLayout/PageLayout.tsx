@@ -7,12 +7,14 @@ import { $theme } from "../theme-switcher/model/model";
 import { Pages } from "../../pages";
 import Photo from "./ui/ProfileCard/lib/photo.jpg";
 import styles from "./PageLayout.module.scss";
+import { useResize } from "../../shared/utils/useResize";
 
 const { Header, Content } = Layout;
 
 export const PageLayout = () => {
   const themeValue = useUnit($theme);
   const [isLoading, setLoading] = useState(true);
+  const { isScreenMd } = useResize();
 
   useEffect(() => {
     const timeoutId = setTimeout(() => setLoading(false), 1000);
@@ -34,14 +36,18 @@ export const PageLayout = () => {
             className={styles.avatar}
           />
         )}
-        <ProfileCard
-          className={classNames(styles.hidden, {
-            [styles.visible]: !isLoading,
-          })}
-        />
+        {isScreenMd && (
+          <ProfileCard
+            className={classNames(styles.hidden, {
+              [styles.visible]: !isLoading,
+            })}
+            isScreenMd={isScreenMd}
+          />
+        )}
         <Layout
           className={classNames(styles.container, {
             [styles.container_visible]: !isLoading,
+            [styles.container_md]: !isScreenMd,
           })}
         >
           <Header

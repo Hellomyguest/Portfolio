@@ -1,47 +1,72 @@
-import { Col, Progress, Row, Space, Typography } from "antd";
+import { Flex, Tag, Typography } from "antd";
 import { useTranslation } from "react-i18next";
 import { ParagraphTitle } from "../../shared/ui/ParagraphTitle/ParagraphTitle";
 import styles from "./page.module.scss";
+import { ProfileCard } from "../../features/PageLayout/ui";
+import { useResize } from "../../shared/utils/useResize";
 
-const { Title, Paragraph } = Typography;
+const { Paragraph } = Typography;
 
 type ProgressType = {
   title: string;
-  progress: number;
+  progress?: number;
+  color?: string;
 };
 
 const languages: ProgressType[] = [
-  { title: "HTML5", progress: 80 },
-  { title: "CSS3", progress: 80 },
-  { title: "SCSS", progress: 50 },
-  { title: "JavaScript", progress: 70 },
-  { title: "TypeScript", progress: 50 },
+  { title: "HTML5", progress: 80, color: "blue" },
+  { title: "CSS3", progress: 80, color: "blue" },
+  { title: "SCSS", progress: 50, color: "blue" },
+  { title: "JavaScript", progress: 70, color: "blue" },
+  { title: "TypeScript", progress: 50, color: "blue" },
 ];
 
 const libraries: ProgressType[] = [
-  { title: "React", progress: 70 },
-  { title: "Redux-toolkit", progress: 60 },
-  { title: "Effector", progress: 60 },
-  { title: "React-router", progress: 80 },
-  { title: "Atomic-router", progress: 80 },
+  { title: "React", progress: 70, color: "magenta" },
+  { title: "Redux-toolkit", progress: 60, color: "magenta" },
+  { title: "Effector", progress: 60, color: "magenta" },
+  { title: "React-router", progress: 80, color: "magenta" },
+  { title: "Atomic-router", progress: 80, color: "magenta" },
 ];
 
-const frameworks: ProgressType[] = [
+const otherSkills: ProgressType[] = [
+  { title: "Jira", color: "green" },
+  { title: "Ant design", color: "green" },
+  { title: "Material UI", color: "green" },
+];
+
+/* const frameworks: ProgressType[] = [
   { title: "Node.js", progress: 0 },
   { title: "Next.js", progress: 0 },
-];
+]; */
 
 export const HomePage = () => {
   const { t } = useTranslation();
+  const { isScreenMd } = useResize();
+
+  const softSkills: ProgressType[] = [
+    { title: "Code Review", color: "orange" },
+    { title: t("homePage.skills.english"), color: "orange" },
+  ];
 
   return (
     <>
+      {!isScreenMd && <ProfileCard isScreenMd={isScreenMd} />}
       <ParagraphTitle>{t("homePage.about.title")}</ParagraphTitle>
       <Paragraph className={styles.paragraph}>
         {t("homePage.about.text")}
       </Paragraph>
       <ParagraphTitle>{t("homePage.skills.title")}</ParagraphTitle>
-      <Row gutter={16}>
+      <Flex gap="8px 0" wrap="wrap">
+        {[...languages, ...libraries, ...otherSkills, ...softSkills].map(
+          (item) => (
+            <Tag color={item.color} style={{ fontSize: 14 }}>
+              {item.title}
+            </Tag>
+          )
+        )}
+      </Flex>
+      {/* <Row gutter={16}>
         <Col span={8}>
           <Space size="small" direction="vertical" className={styles.space}>
             <ParagraphTitle level={4}>
@@ -96,7 +121,7 @@ export const HomePage = () => {
             ))}
           </Space>
         </Col>
-      </Row>
+      </Row> */}
     </>
   );
 };

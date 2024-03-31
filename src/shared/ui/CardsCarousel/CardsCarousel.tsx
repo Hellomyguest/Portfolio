@@ -7,12 +7,23 @@ import styles from "./CardCarousel.module.scss";
 type CardsCarouselProps = {
   cards: ReactNode[];
   autoplay?: boolean;
+  isScreenSm: boolean;
 };
 
-export const CardsCarousel = ({ cards, autoplay }: CardsCarouselProps) => (
+export const CardsCarousel = ({
+  cards,
+  autoplay,
+  isScreenSm,
+}: CardsCarouselProps) => (
   <Carousel autoplay={autoplay}>
     {cards.reduce((acc: ReactNode[], card, index) => {
-      if (index % 2 === 0 && cards.length > 1) {
+      if (!isScreenSm) {
+        acc.push(
+          <div key={uuidv4()}>
+            <div className={styles.wrapper}>{card}</div>
+          </div>
+        );
+      } else if (index % 2 === 0 && cards.length > 1 && isScreenSm) {
         acc.push(
           <div key={uuidv4()}>
             <div className={classNames(styles.wrapper, styles.wrapper_multy)}>

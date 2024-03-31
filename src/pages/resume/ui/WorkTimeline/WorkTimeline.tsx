@@ -51,9 +51,27 @@ export const WorkTimeline = () => {
       children: (
         <>
           <Title level={5}>
+            {t("resumePage.work.sber")} - {t("profileCard.speciality")}
+            <br />
+            06-2023 - {t("resumePage.work.tillNow")}
+          </Title>
+          <Text>
+            {t("resumePage.work.12.responsibilities.1")}
+            <br />
+            {t("resumePage.work.12.responsibilities.2")}
+            <br />
+            Code review
+          </Text>
+        </>
+      ),
+    },
+    {
+      children: (
+        <>
+          <Title level={5}>
             {t("resumePage.work.1.employer")} - {t("profileCard.speciality")}
             <br />
-            11-2022 - {t("resumePage.work.tillNow")}
+            11-2022 - 06-2023{t("resumePage.work.tillNow")}
           </Title>
           <Text>
             {t("resumePage.work.1.responsibilities")}

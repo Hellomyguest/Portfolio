@@ -1,9 +1,6 @@
 export const resumePageTranslations = {
   en: {
     title: "Resume",
-    characteristics: {
-      title: "Reviews",
-    },
     work: {
       title: "Working history",
       show: "Show all",
@@ -110,6 +107,12 @@ export const resumePageTranslations = {
           3: "Increasing sales volumes",
         },
       },
+      12: {
+        responsibilities: {
+          1: "Development and support of internal bank software",
+          2: "Development of components for ui library",
+        },
+      },
     },
     edu: {
       title: "Education history",
@@ -163,9 +166,6 @@ export const resumePageTranslations = {
   },
   ru: {
     title: "Резюме",
-    characteristics: {
-      title: "Отзывы",
-    },
     work: {
       title: "Опыт работы",
       show: "Показать всё",
@@ -270,6 +270,12 @@ export const resumePageTranslations = {
           1: "Развитие и поддержание клиентской базы",
           2: "Регулярная работа с существующими клиентами, прием заказов",
           3: "Увеличение объемов продаж",
+        },
+      },
+      12: {
+        responsibilities: {
+          1: "Разработка и поддержка внутреннего ПО банка",
+          2: "Разработка компонентов для ui библиотеки",
         },
       },
     },

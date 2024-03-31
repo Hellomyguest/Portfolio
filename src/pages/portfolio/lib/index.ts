@@ -5,6 +5,7 @@ import AdminPanelImg from "./images/AdminPanel.jpg";
 import MockGeneratorImg from "./images/MockGenerator.jpg";
 import SearchCarImg from "./images/SearchCar.jpg";
 import YmapsImg from "./images/Ymaps.jpg";
+import DatePicker from "./images/DatePicker.jpg";
 
 export {
   CryptoImg,
@@ -14,4 +15,5 @@ export {
   MockGeneratorImg,
   SearchCarImg,
   YmapsImg,
+  DatePicker,
 };
