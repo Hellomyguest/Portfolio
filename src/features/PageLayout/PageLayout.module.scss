@@ -1,8 +1,14 @@
+@import "../../media.scss";
+
 ._ {
   min-height: 100vh;
   display: block;
   padding-inline: 3rem;
   background-color: transparent;
+
+  @include media("max", "650px") {
+    padding-inline: 1rem;
+  }
 }
 
 .dark {

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const SCREEN_SM = 576;
+const SCREEN_SM = 600;
 const SCREEN_SMM = 800;
 const SCREEN_MD = 968;
 const SCREEN_LG = 1280;

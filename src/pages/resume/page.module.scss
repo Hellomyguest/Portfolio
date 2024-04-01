@@ -1,9 +1,14 @@
-.characteristicsTitle {
-    margin-top: 1rem;
+.logo {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1668dc;
+  color: #fff;
 }
 
-.card {
-    width: fit-content;
-    margin: 0;
-    box-shadow: 0px 0px 48px 0px rgba(4, 6, 4, 0.08);
+.title {
+  margin-left: 0.5rem;
 }

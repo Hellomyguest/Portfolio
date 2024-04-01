@@ -1,0 +1,17 @@
+.timeline {
+  li:nth-last-child(-n + 2) {
+    div:first-child {
+      display: none !important;
+    }
+  }
+}
+
+.button {
+  display: block;
+  margin: auto;
+  transform: translateX(-2rem);
+}
+
+.icon__reverse {
+  transform: rotate(180deg);
+}
