@@ -4,6 +4,7 @@ import classNames from "classnames";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import styles from "./CollapsableTimeline.module.scss";
+import { useResize } from "../../utils/useResize";
 
 export const CollapsableTimeline = ({
   items,
@@ -11,6 +12,7 @@ export const CollapsableTimeline = ({
   items: TimelineItemProps[];
 }) => {
   const { t } = useTranslation();
+  const { isScreenSm } = useResize();
   const [isCollapsed, setCollapsed] = useState(true);
 
   const handleClick = () => setCollapsed(!isCollapsed);
@@ -35,9 +37,8 @@ export const CollapsableTimeline = ({
       </Button>
     ),
   };
-
   const collapsableItems = isCollapsed
-    ? items.slice(0, 3).concat(ExpandButton)
+    ? items.slice(0, isScreenSm ? 3 : 2).concat(ExpandButton)
     : items.concat(ExpandButton);
 
   return <Timeline className={styles.timeline} items={collapsableItems} />;

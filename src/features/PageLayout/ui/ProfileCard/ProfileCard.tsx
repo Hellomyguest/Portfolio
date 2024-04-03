@@ -21,16 +21,20 @@ const { Title, Text } = Typography;
 
 type ProfileCardType = {
   className?: string;
-  isScreenMd: boolean;
+  isScreenLg: boolean;
+  isScreenSm?: boolean;
 };
 
-const Content = ({ small }: { small?: boolean }) => {
+const Content = ({ medium, small }: { medium?: boolean; small?: boolean }) => {
   const { t } = useTranslation();
   const infoData = [
-    <Text>
-      <b>{t("profileCard.fullName")}</b> <br />
-      <b>{t("profileCard.speciality")}</b>
-    </Text>,
+    <>
+      {!small && <Image src={Photo} className={styles.img_sm} />}
+      <Text>
+        <b>{t("profileCard.fullName")}</b> <br />
+        <b>{t("profileCard.speciality")}</b>
+      </Text>
+    </>,
     <Text>
       <b>{t("profileCard.birthday.title")}</b>
       {t("profileCard.birthday.text")}
@@ -63,24 +67,26 @@ const Content = ({ small }: { small?: boolean }) => {
       </Button>
     </Text>,
   ];
-  return small ? (
+  return !medium ? (
     <>
       <div className={styles.info_wrapper}>
-        <div className={styles.avatar_wrapper}>
-          <Image src={Photo} className={styles.img_small} />
-          <Button
-            type="primary"
-            href={Resume}
-            download="Resume"
-            target="_blank"
-            icon={<DownloadOutlined />}
-            className={styles.button_resume}
-          >
-            Скачать резюме
-          </Button>
-        </div>
+        {small && (
+          <div className={styles.avatar_wrapper}>
+            <Image src={Photo} className={styles.img_md} />
+            <Button
+              type="primary"
+              href={Resume}
+              download="Resume"
+              target="_blank"
+              icon={<DownloadOutlined />}
+              className={styles.button_resume}
+            >
+              Скачать резюме
+            </Button>
+          </div>
+        )}
         <List
-          className={styles.list}
+          className={small ? styles.list : undefined}
           dataSource={infoData}
           renderItem={(item) => <List.Item>{item}</List.Item>}
         />
@@ -165,10 +171,14 @@ const Content = ({ small }: { small?: boolean }) => {
   );
 };
 
-export const ProfileCard = ({ className, isScreenMd }: ProfileCardType) => {
+export const ProfileCard = ({
+  className,
+  isScreenLg,
+  isScreenSm,
+}: ProfileCardType) => {
   const themeValue = useUnit($theme);
 
-  return isScreenMd ? (
+  return isScreenLg ? (
     <Sider
       width="300px"
       className={classNames(styles._, className, {
@@ -178,14 +188,16 @@ export const ProfileCard = ({ className, isScreenMd }: ProfileCardType) => {
       <Content />
     </Sider>
   ) : (
-    <Content small />
+    <Content medium={isScreenLg} small={isScreenSm} />
   );
 };
 
 Content.defaultProps = {
-  small: false,
+  small: true,
+  medium: true,
 };
 
 ProfileCard.defaultProps = {
   className: undefined,
+  isScreenSm: true,
 };

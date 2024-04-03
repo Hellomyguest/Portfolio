@@ -145,14 +145,14 @@ const events: CardType[] = [
 
 export const GrowthPage = () => {
   const { t } = useTranslation();
-  const { isScreenSm } = useResize();
+  const { isScreenSmm } = useResize();
   const courses = [
     {
       key: "1",
       label: t("growthPage.courses.scheduled"),
       children: (
         <CardsCarousel
-          isScreenSm={isScreenSm}
+          isScreenSm={isScreenSmm}
           cards={scheduledTraining.map((item) => (
             <InfoCard title={item.title} link={item.link} />
           ))}
@@ -164,7 +164,7 @@ export const GrowthPage = () => {
       label: t("growthPage.courses.done"),
       children: (
         <CardsCarousel
-          isScreenSm={isScreenSm}
+          isScreenSm={isScreenSmm}
           cards={completedTraining.map((item) => (
             <InfoCard title={item.title} link={item.link} />
           ))}
@@ -179,7 +179,7 @@ export const GrowthPage = () => {
       label: t("growthPage.books.scheduled"),
       children: (
         <CardsCarousel
-          isScreenSm={isScreenSm}
+          isScreenSm={isScreenSmm}
           cards={scheduledBooks.map((book) => (
             <InfoCard noPadding cover={book.cover} link={book.link} />
           ))}
@@ -191,7 +191,7 @@ export const GrowthPage = () => {
       label: t("growthPage.books.done"),
       children: (
         <CardsCarousel
-          isScreenSm={isScreenSm}
+          isScreenSm={isScreenSmm}
           cards={readBooks.map((book) => (
             <InfoCard noPadding cover={book.cover} link={book.link} />
           ))}
@@ -216,7 +216,7 @@ export const GrowthPage = () => {
       <div>
         <ParagraphTitle>{t("growthPage.events")}</ParagraphTitle>
         <CardsCarousel
-          isScreenSm={isScreenSm}
+          isScreenSm={isScreenSmm}
           cards={events.map((item) => (
             <InfoCard title={item.title} link={item.link} />
           ))}

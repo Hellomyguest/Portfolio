@@ -22,9 +22,16 @@
   clip-path: polygon(0 15%, 100% 0, 100% 85%, 0% 100%);
 }
 
-.img_small {
+.img_md {
   border-radius: 0.5rem;
   max-height: 13rem;
+}
+
+.img_sm {
+  border-radius: 1rem;
+  border: 0.125rem solid #1668dc;
+  width: 5rem !important;
+  margin-right: 0.5rem;
 }
 
 .list {

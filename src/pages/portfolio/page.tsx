@@ -95,13 +95,13 @@ const petProjects: ProjectType[] = [
 
 export const PortfolioPage = () => {
   const { t } = useTranslation();
-  const { isScreenSm } = useResize();
+  const { isScreenSmm } = useResize();
 
   return (
     <>
       <ParagraphTitle>{t("portfolioPage.completed")}</ParagraphTitle>
       <CardsCarousel
-        isScreenSm={isScreenSm}
+        isScreenSm={isScreenSmm}
         cards={[...doneProjects, ...currentProjects].map((project) => (
           <ProjectCard
             title={project.title}
@@ -127,7 +127,7 @@ export const PortfolioPage = () => {
       /> */}
       <ParagraphTitle>{t("portfolioPage.pet")}</ParagraphTitle>
       <CardsCarousel
-        isScreenSm={isScreenSm}
+        isScreenSm={isScreenSmm}
         cards={petProjects.map((project) => (
           <ProjectCard
             title={project.title}

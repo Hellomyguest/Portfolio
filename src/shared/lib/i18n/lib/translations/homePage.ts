@@ -2,7 +2,10 @@ export const homePageTranslations = {
   en: {
     about: {
       title: "About me",
-      text: "I am pleased to introduce myself as a junior frontend developer who graduated in 2022 and is ready to start his career in this field. I am sure that my knowledge and skills will be useful for your company.\nDuring my studies, I studied the programming languages HTML, CSS and JavaScript, as well as the React library.\nI am always ready for new challenges and strive for constant self-improvement. I am confident that I can contribute to your company and help it reach new heights.\nI am willing to work in a team with other developers and learn from them. I am sure that my energy, motivation and professionalism will make me a valuable asset for your company.",
+      text: `I am pleased to introduce myself to you as a frontend developer with 1.5 years of experience.
+During my time there, I acquired a wide range of skills, including deep knowledge of React, Redux, JavaScript, HTML and CSS, and have experience building scalable and performant web applications.
+My responsibility, organization and desire for self-improvement make me a reliable specialist who can bring real value to your project.
+I am confident that my experience and skills will be a valuable addition to your team. I would be happy to discuss the possibility of joining your project and contribute to its success.`,
     },
     skills: {
       title: "Skills",
@@ -15,7 +18,10 @@ export const homePageTranslations = {
   ru: {
     about: {
       title: "Обо мне",
-      text: "Я рад представиться вам как junior frontend разработчик, который закончил обучение в 2022 году и готов начать свою карьеру в этой сфере. Я уверен, что мои знания и навыки будут полезны для вашей компании.\nВ течение моего обучения я изучал языки программирования HTML, CSS и JavaScript, а также библиотеку React.\nЯ всегда готов к новым вызовам и стремлюсь к постоянному самосовершенствованию. Уверен, что могу принести свой вклад в вашу компанию и помочь ей достичь новых высот.\nЯ готов работать в команде с другими разработчиками и учиться у них. Уверен, что моя энергия, мотивация и профессионализм сделают меня ценным активом для вашей компании.",
+      text: `Я рад представиться вам как frontend разработчик с 1.5 летним опытом работы.
+За время работы я приобрел широкий спектр навыков, включая глубокие знания React, Redux, JavaScript, HTML и CSS, имею опыт создания масштабируемых и производительных веб-приложений.
+Моя ответственность, организованность и стремление к самосовершенствованию делают меня надежным специалистом, способным принести реальную ценность вашему проекту.
+Я уверен, что мой опыт и умения могут быть ценным дополнением к вашей команде. Буду рад обсудить возможность присоединения к вашему проекту и внести свой вклад в его успех.`,
     },
     skills: {
       title: "Навыки",

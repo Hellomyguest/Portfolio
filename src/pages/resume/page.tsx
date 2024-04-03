@@ -6,11 +6,13 @@ import { CollapsableTimeline } from "../../shared/ui";
 import { ReactComponent as WorkIcon } from "./lib/icons/work.svg";
 import { ReactComponent as EduIcon } from "./lib/icons/education.svg";
 import styles from "./page.module.scss";
+import { useResize } from "../../shared/utils/useResize";
 
 const { Title, Text } = Typography;
 
 export const ResumePage = () => {
   const { t } = useTranslation();
+  const { isScreenSm } = useResize();
 
   const workItems: TimelineItemProps[] = [
     {
@@ -423,7 +425,7 @@ export const ResumePage = () => {
   return (
     <>
       <ParagraphTitle>{t("resumePage.title")}</ParagraphTitle>
-      <Space align="start">
+      <Space align="start" direction={isScreenSm ? "horizontal" : "vertical"}>
         <CollapsableTimeline items={workItems} />
         <CollapsableTimeline items={eduItems} />
       </Space>

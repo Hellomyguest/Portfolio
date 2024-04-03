@@ -4,7 +4,7 @@ import LanguageDetector from "i18next-browser-languagedetector";
 import { translations } from "./lib";
 
 i18n.use(LanguageDetector).use(initReactI18next).init({
-  fallbackLng: "en",
+  fallbackLng: "ru",
   resources: translations,
 });
 

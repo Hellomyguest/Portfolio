@@ -14,7 +14,7 @@ const { Header, Content } = Layout;
 export const PageLayout = () => {
   const themeValue = useUnit($theme);
   const [isLoading, setLoading] = useState(true);
-  const { isScreenMd } = useResize();
+  const { isScreenLg } = useResize();
 
   useEffect(() => {
     const timeoutId = setTimeout(() => setLoading(false), 1000);
@@ -36,18 +36,18 @@ export const PageLayout = () => {
             className={styles.avatar}
           />
         )}
-        {isScreenMd && (
+        {isScreenLg && (
           <ProfileCard
             className={classNames(styles.hidden, {
               [styles.visible]: !isLoading,
             })}
-            isScreenMd={isScreenMd}
+            isScreenLg={isScreenLg}
           />
         )}
         <Layout
           className={classNames(styles.container, {
             [styles.container_visible]: !isLoading,
-            [styles.container_md]: !isScreenMd,
+            [styles.container_md]: !isScreenLg,
           })}
         >
           <Header

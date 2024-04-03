@@ -113,7 +113,6 @@ export const ProjectCard = ({
         <Modal
           centered
           width="fit-content"
-          title="Basic Modal"
           open={isModalOpen}
           onCancel={handleClickCloseModal}
           cancelButtonProps={{ className: styles.display_none }}

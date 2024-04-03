@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 
-const SCREEN_SM = 600;
-const SCREEN_SMM = 800;
-const SCREEN_MD = 968;
-const SCREEN_LG = 1280;
+const SCREEN_SM = 500;
+const SCREEN_SMM = 600;
+const SCREEN_MD = 800;
+const SCREEN_LG = 968;
 const SCREEN_XL = 1680;
 const SCREEN_XXL = 1945;
 

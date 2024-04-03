@@ -42,7 +42,7 @@ const otherSkills: ProgressType[] = [
 
 export const HomePage = () => {
   const { t } = useTranslation();
-  const { isScreenMd } = useResize();
+  const { isScreenLg, isScreenSm } = useResize();
 
   const softSkills: ProgressType[] = [
     { title: "Code Review", color: "orange" },
@@ -51,7 +51,9 @@ export const HomePage = () => {
 
   return (
     <>
-      {!isScreenMd && <ProfileCard isScreenMd={isScreenMd} />}
+      {!isScreenLg && (
+        <ProfileCard isScreenLg={isScreenLg} isScreenSm={isScreenSm} />
+      )}
       <ParagraphTitle>{t("homePage.about.title")}</ParagraphTitle>
       <Paragraph className={styles.paragraph}>
         {t("homePage.about.text")}
@@ -60,7 +62,7 @@ export const HomePage = () => {
       <Flex gap="8px 0" wrap="wrap">
         {[...languages, ...libraries, ...otherSkills, ...softSkills].map(
           (item) => (
-            <Tag color={item.color} style={{ fontSize: 14 }}>
+            <Tag color={item.color} style={{ fontSize: 14 }} key={item.title}>
               {item.title}
             </Tag>
           )
