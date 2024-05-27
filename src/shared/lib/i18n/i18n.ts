@@ -4,7 +4,7 @@ import { translations } from "./lib";
 
 i18n.use(initReactI18next).init({
   lng: "ru-Ru",
-  fallbackLng: "ru",
+  fallbackLng: "ru-Ru",
   resources: translations,
 });
 
