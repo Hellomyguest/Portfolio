@@ -44,7 +44,7 @@ const currentProjects: ProjectType[] = [
 const doneProjects: ProjectType[] = [
   {
     title: "Crypto Carousel",
-    link: "https://cryptocarousel.fun/",
+    link: "https://hellomyguest.github.io/cryptocarousel/",
     tags: ["JavaScript", "React", "React-router", "Web3", "Wagmi"],
     cover: CryptoImg,
   },

@@ -1,5 +1,5 @@
 /* eslint-disable no-script-url */
-import { Progress, Space, Tabs } from "antd";
+import { Space, Tabs } from "antd";
 import { useTranslation } from "react-i18next";
 import { CardsCarousel, InfoCard, ParagraphTitle } from "../../shared/ui";
 import {
@@ -202,13 +202,13 @@ export const GrowthPage = () => {
 
   return (
     <Space direction="vertical" style={{ width: "100%" }}>
-      <div>
+      {/*       <div>
         <ParagraphTitle>{t("growthPage.leetCode")}</ParagraphTitle>
         <Progress
           percent={3.2}
           strokeColor={{ "0%": "#108ee9", "100%": "#87d068" }}
         />
-      </div>
+      </div> */}
       <div>
         <ParagraphTitle>{t("growthPage.courses.title")}</ParagraphTitle>
         <Tabs defaultActiveKey="1" items={courses} />
