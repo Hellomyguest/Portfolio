@@ -1,1 +1,0 @@
-import{j as n,c as i,b as s,d as r}from"./index-9bc42811.js";const _="___1nfer_1",c="_title_1nfer_7",o="_underline_1nfer_12",e={_,title:c,underline:o},d=({className:a,level:l,children:t})=>n("div",{className:i(e._,a),children:[s(r,{level:l,className:e.title,children:t}),s("span",{className:e.underline})]});d.defaultProps={className:void 0,level:3};export{d as P};
