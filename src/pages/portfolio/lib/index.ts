@@ -6,6 +6,7 @@ import MockGeneratorImg from "./images/MockGenerator.jpg";
 import SearchCarImg from "./images/SearchCar.jpg";
 import YmapsImg from "./images/Ymaps.jpg";
 import DatePicker from "./images/DatePicker.jpg";
+import CollapsableCards from "./images/CollapsableCards.jpg";
 
 export {
   CryptoImg,
@@ -16,4 +17,5 @@ export {
   SearchCarImg,
   YmapsImg,
   DatePicker,
+  CollapsableCards,
 };

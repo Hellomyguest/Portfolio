@@ -109,8 +109,17 @@ export const resumePageTranslations = {
       },
       12: {
         responsibilities: {
-          1: "Development and support of internal bank software",
-          2: "Development of components for ui library",
+          1: "Technology stack: React ts, Redux toolkit, RTK query, React-router, Material UI, React query, webpack, бэк: sap",
+          2: "Tracker: Jira",
+          3: "Responsibilities:",
+          4: "* Development of new modules, support and refactoring of existing modules of the internal software of the bank’s financial unit.",
+          5: "* Development of components for ui library",
+          6: "* Performing release cycle tasks",
+        },
+        achievements: {
+          1: "Achievements",
+          2: "* Transfer of a financial application to RTK query",
+          3: "* Optimization of rendering of large components by an average of 2 times",
         },
       },
     },
@@ -274,8 +283,17 @@ export const resumePageTranslations = {
       },
       12: {
         responsibilities: {
-          1: "Разработка и поддержка внутреннего ПО банка",
-          2: "Разработка компонентов для ui библиотеки",
+          1: "Тех.стек: React ts, Redux toolkit, RTK query, React-router, Material UI, React query, webpack, бэк: sap",
+          2: "Трекер: Jira",
+          3: "Обязанности:",
+          4: "* Разработка новых модулей, поддержка и рефакторинг существующих модулей внутреннего ПО финансового блока банка.",
+          5: "* Разработка компонентов для ui библиотеки",
+          6: "* Выполнение задач релизного цикла",
+        },
+        achievements: {
+          1: "Достижения",
+          2: "* Перевод финансового приложения на RTK query",
+          3: "* Оптимизация рендера крупных компонентов в среднем в 2 раза",
         },
       },
     },

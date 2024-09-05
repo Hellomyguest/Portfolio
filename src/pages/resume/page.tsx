@@ -33,14 +33,30 @@ export const ResumePage = () => {
           <Title level={5}>
             {t("resumePage.work.sber")} - {t("profileCard.speciality")}
             <br />
-            06-2023 - {t("resumePage.work.tillNow")}
+            06-2022 - {t("resumePage.work.tillNow")}
           </Title>
           <Text>
             {t("resumePage.work.12.responsibilities.1")}
             <br />
             {t("resumePage.work.12.responsibilities.2")}
             <br />
-            Code review
+            <br />
+            {t("resumePage.work.12.responsibilities.3")}
+            <br />
+            {t("resumePage.work.12.responsibilities.4")}
+            <br />
+            {t("resumePage.work.12.responsibilities.5")}
+            <br />
+            {t("resumePage.work.12.responsibilities.6")}
+            <br />
+            * Code review
+            <br />
+            <br />
+            {t("resumePage.work.12.achievements.1")}
+            <br />
+            {t("resumePage.work.12.achievements.2")}
+            <br />
+            {t("resumePage.work.12.achievements.3")}
           </Text>
         </>
       ),
@@ -51,7 +67,7 @@ export const ResumePage = () => {
           <Title level={5}>
             {t("resumePage.work.1.employer")} - {t("profileCard.speciality")}
             <br />
-            11-2022 - 06-2023
+            11-2022 - 05-2023
           </Title>
           <Text>
             {t("resumePage.work.1.responsibilities")}
@@ -67,7 +83,7 @@ export const ResumePage = () => {
           <Title level={5}>
             {t("resumePage.work.sber")} - {t("resumePage.work.2.speciality")}
             <br />
-            07.2019 - 11-2022
+            07.2019 - 05-2022
           </Title>
           <Text>
             {t("resumePage.work.2.responsibilities.1")}
@@ -77,22 +93,6 @@ export const ResumePage = () => {
             {t("resumePage.work.2.responsibilities.3")}
             <br />
             {t("resumePage.work.2.responsibilities.4")}
-          </Text>
-        </>
-      ),
-    },
-    {
-      children: (
-        <>
-          <Title level={5}>
-            Crypto Carousel Development - {t("profileCard.speciality")}
-            <br />
-            01.2023 - 03.2023
-          </Title>
-          <Text>
-            {t("resumePage.work.3.responsibilities.1")}
-            <br />
-            {t("resumePage.work.3.responsibilities.2")}
           </Text>
         </>
       ),
@@ -290,7 +290,7 @@ export const ResumePage = () => {
         <Title level={5}>
           {t("resumePage.edu.sber")} - {t("resumePage.edu.1.course")}
           <br />
-          08-2022 - 12-2022
+          01-2022 - 05-2022
         </Title>
       ),
     },
@@ -299,7 +299,7 @@ export const ResumePage = () => {
         <Title level={5}>
           {t("resumePage.edu.sber")} - {t("resumePage.edu.2.course")}
           <br />
-          03-2022
+          12-2021
         </Title>
       ),
     },
@@ -308,7 +308,7 @@ export const ResumePage = () => {
         <Title level={5}>
           {t("resumePage.edu.sber")} - {t("resumePage.edu.3.course")}
           <br />
-          03-2022
+          12-2021
         </Title>
       ),
     },
@@ -317,7 +317,7 @@ export const ResumePage = () => {
         <Title level={5}>
           {t("resumePage.edu.sber")} - {t("resumePage.edu.4.course")}
           <br />
-          02-2022
+          11-2021
         </Title>
       ),
     },
@@ -326,7 +326,7 @@ export const ResumePage = () => {
         <Title level={5}>
           {t("resumePage.edu.sber")} - {t("resumePage.edu.5.course")}
           <br />
-          01-2022
+          11-2021
         </Title>
       ),
     },
